@@ -1,4 +1,7 @@
 <?php
+
+namespace LOJA\Model;
+
 class Categoria{
     private $pk_categoria;
     private $nome;

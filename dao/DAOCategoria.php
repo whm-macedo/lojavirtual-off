@@ -1,5 +1,9 @@
 <?php
 
+namespace LOJA\DAO;
+use LOJA\Model\Conexao;
+use LOJA\Model\Categoria;
+
 class DAOCategoria{
     public function cadastrarCategoria(Categoria $categoria){
         $sql = "INSERT INTO categoria VALUES (default, :nome)"; 

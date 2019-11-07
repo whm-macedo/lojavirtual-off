@@ -1,9 +1,15 @@
 <?php
+namespace LOJA\Actions;
+use LOJA\Model\Categoria;
+use LOJA\DAO\DAOCategoria;
+
+class CategoriaCadastrar{
+
+    function __construct(){
+
 if ($_POST) {
-    require_once "model/conexao.php";
-    require_once "model/categoria.class.php";
-    require_once "dao/categoria.dao.php";
-    try {
+     
+      try {
         $cadastrar = new Categoria();
         $cadastrar->setNome($_POST['nome']);
         
@@ -14,5 +20,7 @@ if ($_POST) {
     } catch (Exception $erro) {
         $msg = $erro->getMessage();
     }
+}
+}
 }
 ?>

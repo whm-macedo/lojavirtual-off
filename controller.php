@@ -1,4 +1,6 @@
 <?php 
+
+    require "includes/autoload.php";
     // capturando os dados da url
     // Ex.: http://localhost/lojavirtual/admin/departamento/cadastrar/listar
     // model = departamento & action=listar
@@ -12,7 +14,8 @@
     switch($router){
 
         case 'categoriacadastrar':
-            include "actions/cadastrar-categoria.php";
+            
+            new \LOJA\Actions\CategoriaCadastrar;
             $view = "form-categoria.php";
             break;
 
@@ -22,56 +25,56 @@
             break;
             // admin/cliente/listar
         case 'clientelistar':
-        include "actions/listar-clientes.php";
-        $view = "lista-cliente.php";
-        break;
+            include "actions/listar-clientes.php";
+            $view = "lista-cliente.php";
+            break;
             // admin/cliente/visualizar/:id
         case 'clientevisualizar':
-        include "actions/buscar-cliente.php";
-        $view = "visualiza-cliente.php";
-        break;
+            include "actions/buscar-cliente.php";
+            $view = "visualiza-cliente.php";
+            break;
 
         case 'produtocadastrar':
-        include "actions/cadastrar-produto.php";
-        $view = "form-produto.php";
-        break;
+            include "actions/cadastrar-produto.php";
+            $view = "form-produto.php";
+            break;
 
         case 'produtolistar':
-        include "actions/listar-produto.php";
-        $view = "lista-produto.php";
-        break;
+            include "actions/listar-produto.php";
+            $view = "lista-produto.php";
+            break;
 
 
         case 'usuariocadastrar':
-        include "actions/cadastrar-usuarios.php";
-        $view = "form-usuario.php";
-        break;
+            include "actions/cadastrar-usuarios.php";
+            $view = "form-usuario.php";
+            break;
 
         case 'usuariolistar':
-        include "actions/listar-usuario.php";
-        $view = "lista-usuario.php";
-        break;
+            include "actions/listar-usuario.php";
+            $view = "lista-usuario.php";
+            break;
 
         case 'usuariovisualizar':
-        include "actions/buscar-usuarios.php";
-        $view = "visualiza-usuario.php";
-        break;
+            include "actions/buscar-usuarios.php";
+            $view = "visualiza-usuario.php";
+            break;
 
         case 'fornecedorcadastrar':
-        include "actions/cadastrar-fornecedor.php";
-        $view = "form-fornecedor.php";
-        break;
+            include "actions/cadastrar-fornecedor.php";
+            $view = "form-fornecedor.php";
+            break;
 
         
         case 'fornecedorlistar':
-        include "actions/listar-fornecedor.php";
-        $view = "lista-fornecedor.php";
-        break;
+            include "actions/listar-fornecedor.php";
+            $view = "lista-fornecedor.php";
+            break;
 
         case 'fornecedorvisualizar':
-        include "actions/buscar-fornecedor.php";
-        $view = "visualiza-fornecedor.php";
-        break;
+            include "actions/buscar-fornecedor.php";
+            $view = "visualiza-fornecedor.php";
+            break;
 
         default:
             echo "default";

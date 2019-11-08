@@ -18,7 +18,7 @@ class DAOUsuario{
         $con->execute();
 
         $usuario = new Usuario();
-        $usuario = $con->fetch(PDO::FETCH_ASSOC);
+        $usuario = $con->fetch(\PDO::FETCH_ASSOC);
        // print_r($usuario); //testar saida
         return $usuario;
     }
@@ -30,7 +30,7 @@ class DAOUsuario{
 
         $lista = array();
 
-        while($usuario = $con->fetch(PDO::FETCH_ASSOC)){
+        while($usuario = $con->fetch(\PDO::FETCH_ASSOC)){
             $lista[] = $usuario;
         }
         return $lista;

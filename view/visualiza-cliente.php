@@ -1,8 +1,14 @@
-<form class="form-horizontal  offset-md-3" method="POST" action="cliente-cadastro.php">
+<?php
+
+  include "view/header.php";
+  
+?>
+
+<form class="form-horizontal  offset-md-3" method="POST" action="cadastrar">
     <fieldset >
 
     <!-- Form Name -->
-    <legend>Cadastro de Cliente</legend>
+    <legend>Visualizar Cliente</legend>
 
     <!-- Text input-->
     <div class="form-group">
@@ -96,3 +102,9 @@
 
     </fieldset>
 </form>
+
+<?php
+
+  include "view/footer.php";
+  
+?>

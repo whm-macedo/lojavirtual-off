@@ -1,4 +1,8 @@
+<?php
 
+  include "view/header.php";
+  
+?>
 <table class="table">
     <thead>
         <th scope="col">ID</th>
@@ -20,4 +24,9 @@
         <?php }?>
     </tbody>
 </table>
+<?php
+
+  include "view/footer.php";
+  
+?>
 

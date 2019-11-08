@@ -1,4 +1,9 @@
 <?php
+
+namespace LOJA\DAO;
+use LOJA\Model\Conexao;
+use LOJA\Model\Cliente;
+
 class DAOCliente{
     public function cadastrar(Cliente $cliente){
         $sql = "INSERT INTO cliente VALUES (default, :nome, :telefone, :email,:cpf, :rua, :complemento, :cep, :uf, :bairro)";
@@ -23,7 +28,7 @@ class DAOCliente{
 
         $lista = array();
 
-        while($cliente = $con->fetch(PDO::FETCH_ASSOC)){
+        while($cliente = $con->fetch(\PDO::FETCH_ASSOC)){
             $lista[] = $cliente;
         }
         return $lista;
@@ -36,7 +41,7 @@ class DAOCliente{
         $con->execute();
 
         $cliente = new Cliente();
-        $cliente = $con->fetch(PDO::FETCH_ASSOC);
+        $cliente = $con->fetch(\PDO::FETCH_ASSOC);
        // print_r($usuario); //testar saida
         return $cliente;
     }

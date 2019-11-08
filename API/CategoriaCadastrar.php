@@ -1,9 +1,11 @@
 <?php
-namespace LOJA\Actions;
+namespace LOJA\API;
 use LOJA\Model\Categoria;
 use LOJA\DAO\DAOCategoria;
 
 class CategoriaCadastrar{
+
+    public $msg;
 
     function __construct(){
 
@@ -15,10 +17,10 @@ if ($_POST) {
         
 
         $DAO = new DAOCategoria;
-        $msg = $DAO->cadastrarCategoria($cadastrar);
+        $this->msg = $DAO->cadastrarCategoria($cadastrar);
 
     } catch (Exception $erro) {
-        $msg = $erro->getMessage();
+        $this->msg = $erro->getMessage();
     }
 }
 }

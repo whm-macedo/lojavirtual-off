@@ -15,22 +15,43 @@
 
         case 'categoriacadastrar':
             
-            new \LOJA\Actions\CategoriaCadastrar;
+            $obj = new \LOJA\API\CategoriaCadastrar;
+            $msg = $obj->msg;
             $view = "form-categoria.php";
             break;
 
         case 'categorialistar':
-            include "actions/listar-categoria.php";
+
+            $obj = new \LOJA\API\CategoriaListar;            
+            $lista = $obj->lista;
             $view = "lista-categoria.php";
             break;
+
+        case 'categoriavisualizar':
+            $obj = new \LOJA\API\CategoriaVisualizar; 
+            $categoria = $obj->dados;
+            $view = "visualiza-categoria.php";
+            break;
+
+        case 'clientecadastrar':
+        
+            $obj = new \LOJA\API\ClienteCadastrar;
+            $msg = $obj->msg;
+            $view = "form-cliente.php";
+            break;
+
+
             // admin/cliente/listar
         case 'clientelistar':
-            include "actions/listar-clientes.php";
+            $obj = new \LOJA\API\ClienteListar;            
+            $lista = $obj->lista;
             $view = "lista-cliente.php";
             break;
+
             // admin/cliente/visualizar/:id
         case 'clientevisualizar':
-            include "actions/buscar-cliente.php";
+           $obj = new \LOJA\API\ClienteVisualizar; 
+            $cliente = $obj->cliente;
             $view = "visualiza-cliente.php";
             break;
 
@@ -81,8 +102,7 @@
         break; 
     }
 
-    include "view/header.php";
+  
     include "view/{$view}";
-    include "view/mensagem.php";
-    include "view/footer.php";
+  
 ?>

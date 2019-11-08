@@ -20,7 +20,7 @@ class DAOFornecedor{
 
         $lista = array();
 
-        while($fornecedor = $con->fetch(PDO::FETCH_ASSOC)){
+        while($fornecedor = $con->fetch(\PDO::FETCH_ASSOC)){
             $lista[] = $fornecedor;
         }
         return $lista;
@@ -32,7 +32,7 @@ class DAOFornecedor{
         $con->execute();
 
         $fornecedor = new Fornecedor();
-        $fornecedor = $con->fetch(PDO::FETCH_ASSOC);
+        $fornecedor = $con->fetch(\PDO::FETCH_ASSOC);
     // print_r($usuario); //testar saida
         return $fornecedor;
 }

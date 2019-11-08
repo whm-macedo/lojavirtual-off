@@ -19,9 +19,20 @@ class DAOCategoria{
 
         $lista = array();
 
-        while($categoria = $con->fetch(PDO::FETCH_ASSOC)){
+        while($categoria = $con->fetch(\PDO::FETCH_ASSOC)){
             $lista[] = $categoria;
         }
         return $lista;
-    }  
+    } 
+    public function buscarPorId($id){
+        $sql ="SELECT * FROM categoria WHERE pk_categoria = :id";
+        $con = Conexao::getInstance()->prepare($sql);
+        $con->bindValue(":id", $id);
+        $con->execute();
+
+        $categoria = new Categoria();
+        $categoria = $con->fetch(\PDO::FETCH_ASSOC);
+       // print_r($usuario); //testar saida
+        return $categoria;
+    } 
 }

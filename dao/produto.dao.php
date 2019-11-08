@@ -21,7 +21,7 @@ public function cadastrar(Produto $produto){
     
             $lista = array();
     
-            while($produto = $con->fetch(PDO::FETCH_ASSOC)){
+            while($produto = $con->fetch(\PDO::FETCH_ASSOC)){
                 $lista[] = $produto;
             }
             return $lista;

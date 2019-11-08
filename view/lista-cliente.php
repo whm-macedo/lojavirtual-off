@@ -1,3 +1,8 @@
+<?php
+
+  include "view/header.php";
+  
+?>
 
 <table class="table">
     <thead>
@@ -29,4 +34,10 @@
         <?php }?>
     </tbody>
 </table>
+
+<?php
+
+  include "view/footer.php";
+  
+?>
 

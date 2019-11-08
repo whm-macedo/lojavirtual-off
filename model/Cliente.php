@@ -1,5 +1,7 @@
 <?php
 
+namespace LOJA\Model;
+
     class Cliente{
         private $pk_cliente;
         private $nome;

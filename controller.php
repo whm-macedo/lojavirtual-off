@@ -11,6 +11,9 @@
 
     $view = "";
 
+    // config
+        $url = "http://localhost/lojavirtual-off";
+
     switch($router){
 
         case 'categoriacadastrar':
@@ -66,7 +69,8 @@
     
 
         case 'produtolistar':
-            include "actions/listar-produto.php";
+            $obj = new \LOJA\API\ProdutoListar;            
+            $lista = $obj->lista;
             $view = "lista-produto.php";
             break;
 
@@ -103,7 +107,7 @@
             break;
 
         default:
-            echo "default";
+        $view = ".php";
         break; 
     }
 

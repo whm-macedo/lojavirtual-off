@@ -1,5 +1,3 @@
-<?php require_once "view/header.php"; ?>
+<?php header("location: http://localhost/lojavirtual-off/produto/listar"); ?>
     
-    <h1>PÁGINA ADMIN</h1>
-
-<?php require_once "view/footer.php"; ?>
+ 

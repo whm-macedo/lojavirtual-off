@@ -16,7 +16,7 @@
         <tr>
             <th scope="row"><?php echo $produto['id']?> </th>
             <td><?php echo $produto['nome']?></td>
-            <td><?php echo number_format($produto['preco'],2,",",".");?></td>
+            <td>R$: <?php echo number_format($produto['preco'],2,",",".");?></td>
             <td><?php echo $produto['categoria']?></td>
             
             

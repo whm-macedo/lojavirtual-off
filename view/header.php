@@ -60,8 +60,8 @@
           Produtos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="ctrl-produto-lista.php">Lista de Produto</a>
-          <a class="dropdown-item" href="ctrl-cadastro-produto.php">Novo Produto</a>
+          <a class="dropdown-item" href="<?php echo $url; ?>/produto/listar">Lista de Produto</a>
+          <a class="dropdown-item" href="<?php echo $url; ?>/produto/cadastrar">Novo Produto</a>
           
         </div>
       </li>

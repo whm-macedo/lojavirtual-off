@@ -1,5 +1,7 @@
 <?php
 
+namespace LOJA\Model;
+
     class Produto{
 
         private $pk_produto;

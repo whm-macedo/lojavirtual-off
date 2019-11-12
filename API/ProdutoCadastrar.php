@@ -1,11 +1,18 @@
 <?php
+namespace LOJA\API;
+use LOJA\Model\Produto;
+use LOJA\DAO\DAOProduto;
+use LOJA\Model\Categoria;
+
+class ProdutoCadastrar{
+
+    public $msg;
+
+        function __construct(){
+
 if($_POST){
 
-    include "model/conexao.php";
-    include "model/produto.class.php";
-    include "model/categoria.class.php";
-    include "dao/produto.dao.php";
-
+   
     try {
         $produto = new produto();
         $produto->setNome($_POST['nome']);
@@ -17,12 +24,14 @@ if($_POST){
         
 
         $DAO = new DAOProduto;
-        $msg = $DAO->cadastrar($produto);
+        $this->msg = $DAO->cadastrar($produto);
      
 
-    } catch (Exception $erro) {
-        $msg = $erro->getMessage();
+    } catch (\Exception $erro) {
+        $this->msg = $erro->getMessage();
     }
+}
+}
 
 }
 ?>

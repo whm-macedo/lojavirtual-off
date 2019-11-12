@@ -1,5 +1,9 @@
 <?php
 
+namespace LOJA\DAO;
+use LOJA\Model\Conexao;
+use LOJA\Model\Produto;
+
 class DAOProduto{
 
 public function cadastrar(Produto $produto){

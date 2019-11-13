@@ -4,7 +4,7 @@
   
 ?>
 
-<form class="form-horizontal" method="post" action="cadastrar">
+<form class="form-horizontal" method="post" action="cadastrar" enctype="multipart/form-data">
     <fieldset>
 
     <!-- Form Name -->
@@ -47,6 +47,14 @@
         
     </div>
     </div>
+
+  <!-- Text input-->
+  <div class="form-group">
+                <label class="col-md-4 control-label" for="descricao">Imagem    </label>  
+                <div class="col-md-4">
+  <input id="imagem" name="imagem" type="file" placeholder="" class="form-control input-md" required="">
+  </div>
+            </div>
 
     <!-- Button -->
     <div class="form-group">

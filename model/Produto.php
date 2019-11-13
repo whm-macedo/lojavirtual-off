@@ -8,6 +8,7 @@ namespace LOJA\Model;
         private $nome;
         private $preco;
         private $categoria;
+        private $imagem;
 
         public function __construct(){
                 
@@ -42,6 +43,13 @@ namespace LOJA\Model;
     
         public function setCategoria($categoria){
             $this->categoria = $categoria;
+        }
+        public function getImagem(){
+            return $this->imagem;
+        }
+    
+        public function setImagem($imagem){
+            $this->imagem = $imagem;
         }
        
     }

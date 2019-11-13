@@ -3,6 +3,7 @@ namespace LOJA\API;
 use LOJA\Model\Produto;
 use LOJA\DAO\DAOProduto;
 use LOJA\Model\Categoria;
+use LOJA\includes\Util;
 
 class ProdutoCadastrar{
 
@@ -17,6 +18,7 @@ if($_POST){
         $produto = new produto();
         $produto->setNome($_POST['nome']);
         $produto->setPreco($_POST['preco']);
+        $produto->setImagem(Util::uploadImg());
         $categoria = new Categoria();
 
         $categoria->setPk_categoria($_POST['categoria']);

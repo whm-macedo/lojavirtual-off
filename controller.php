@@ -58,14 +58,14 @@
             $view = "visualiza-cliente.php";
             break;
 
-            case 'produtocadastrar':
-            
-                $obj = new \LOJA\API\ProdutoCadastrar;
-                $msg = $obj->msg;
-                $obj2 = new \LOJA\API\CategoriaListar;                ;
-                $lista = $obj2->lista;
-                $view = "form-produto.php";
-                break;
+        case 'produtocadastrar':
+        
+            $obj = new \LOJA\API\ProdutoCadastrar;
+            $msg = $obj->msg;
+            $obj2 = new \LOJA\API\CategoriaListar;                ;
+            $lista = $obj2->lista;
+            $view = "form-produto.php";
+            break;
     
 
         case 'produtolistar':

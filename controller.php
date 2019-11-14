@@ -1,5 +1,5 @@
 <?php 
-
+    session_start();
     require "includes/autoload.php";
     // capturando os dados da url
     // Ex.: http://localhost/lojavirtual/admin/departamento/cadastrar/listar
@@ -74,6 +74,7 @@
             $view = "lista-produto.php";
             break;
 
+        
 
         case 'usuariocadastrar':
             include "actions/cadastrar-usuarios.php";
@@ -105,9 +106,25 @@
             include "actions/buscar-fornecedor.php";
             $view = "visualiza-fornecedor.php";
             break;
+            //login adm inicio
+        case 'loginadm':
+            $obj = new \LOJA\API\UsuarioLogar;
+            $msg = $obj->msg;
+            $view = "form-login-adm.php";
+            break;
+    
+        case 'paineladm':
+            $view = "painel-adm.php";
+            break;
+            //-----------
+
+        case 'painellogoff':
+            $obj =new \LOJA\API\UsuarioLogoff;
+            $view = "form-login-adm.php";
+        break;
 
         default:
-        $view = "home.php";
+        $view = "lista-produto.php";
         break; 
     }
 

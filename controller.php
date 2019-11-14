@@ -107,7 +107,7 @@
             break;
 
         default:
-        $view = ".php";
+        $view = "home.php";
         break; 
     }
 

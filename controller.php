@@ -25,6 +25,8 @@
 
         case 'categorialistar':
 
+            \LOJA\includes\Seguranca::restritoAdm();
+
             $obj = new \LOJA\API\CategoriaListar;            
             $lista = $obj->lista;
             $view = "lista-categoria.php";

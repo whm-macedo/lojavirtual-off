@@ -79,9 +79,11 @@
         
 
         case 'usuariocadastrar':
-            include "actions/cadastrar-usuarios.php";
+            $obj = new \LOJA\API\UsuarioCadastrar;
+            $msg = $obj->msg;
             $view = "form-usuario.php";
             break;
+
 
         case 'usuariolistar':
             include "actions/listar-usuario.php";

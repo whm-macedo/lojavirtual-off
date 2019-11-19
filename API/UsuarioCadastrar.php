@@ -1,9 +1,16 @@
 <?php
-if ($_POST) {
-    require_once "model/conexao.php";
-    require_once "model/usuario.class.php";
-    require_once "dao/usuario.dao.php";
+namespace LOJA\API;
+use LOJA\Model\Usuario;
+use LOJA\DAO\DAOUsuario;
 
+class UsuarioCadastrar{
+
+    public $msg;
+
+    function __construct(){
+
+if ($_POST) {
+    
     try {
         $cadastrar = new Usuario();
         $cadastrar->setNome($_POST['nome']);
@@ -14,6 +21,9 @@ if ($_POST) {
 
     } catch (Exception $erro) {
         $msg = $erro->getMessage();
+    }
+
+}
     }
 }
 ?>
